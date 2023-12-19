@@ -29,7 +29,7 @@ function Rockets() {
 
     const rocketItems = rocketList.map((item: Rocket) =>
       <li key={item.id}>
-        {item.rocket_name}
+        {item.name}
       </li>
     );
 
