@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import type { RootState } from '../app/store';
 import { fetchRockets } from '../app/rockets/rocketsSlice';
-import Rocket from '../type/rocketType';
+import Rocket from '../type/rocket';
 
 function Rockets() {
   const dispatch = useAppDispatch();
