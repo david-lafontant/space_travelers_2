@@ -14,7 +14,7 @@ interface rocketState {
   error: null,
  } as rocketState;
 
- const ROCKET_URL = 'https://api.spacexdata.com/v3/rockets';
+ const ROCKET_URL = 'https://api.spacexdata.com/v4/rockets';
 
  export const fetchRockets = createAsyncThunk(
   'rockets/fetchRockets',
