@@ -1,5 +1,16 @@
+
 type Rocket = {
-    id:               number;
+    height:           Diameter;
+    diameter:         Diameter;
+    mass:             Mass;
+    first_stage:      FirstStage;
+    second_stage:     SecondStage;
+    engines:          Engines;
+    landing_legs:     LandingLegs;
+    payload_weights:  PayloadWeight[];
+    flickr_images:    string[];
+    name:             string;
+    type:             string;
     active:           boolean;
     stages:           number;
     boosters:         number;
@@ -8,20 +19,9 @@ type Rocket = {
     first_flight:     Date;
     country:          string;
     company:          string;
-    height:           Diameter;
-    diameter:         Diameter;
-    mass:             Mass;
-    payload_weights:  PayloadWeight[];
-    first_stage:      FirstStage;
-    second_stage:     SecondStage;
-    engines:          Engines;
-    landing_legs:     LandingLegs;
-    flickr_images:    string[];
     wikipedia:        string;
     description:      string;
-    rocket_id:        string;
-    rocket_name:      string;
-    rocket_type:      string;
+    id:               string;
 }
 
 export type Diameter = {
@@ -30,16 +30,16 @@ export type Diameter = {
 }
 
 export type Engines = {
+    isp:              ISP;
+    thrust_sea_level: Thrust;
+    thrust_vacuum:    Thrust;
     number:           number;
     type:             string;
     version:          string;
     layout:           null | string;
-    isp:              ISP;
     engine_loss_max:  number | null;
     propellant_1:     string;
     propellant_2:     string;
-    thrust_sea_level: Thrust;
-    thrust_vacuum:    Thrust;
     thrust_to_weight: number;
 }
 
@@ -54,13 +54,12 @@ export type Thrust = {
 }
 
 export type FirstStage = {
+    thrust_sea_level: Thrust;
+    thrust_vacuum:    Thrust;
     reusable:         boolean;
     engines:          number;
     fuel_amount_tons: number;
     burn_time_sec:    number | null;
-    thrust_sea_level: Thrust;
-    thrust_vacuum:    Thrust;
-    cores?:           number;
 }
 
 export type LandingLegs = {
@@ -81,23 +80,22 @@ export type PayloadWeight = {
 }
 
 export type SecondStage = {
+    thrust:           Thrust;
+    payloads:         Payloads;
     reusable:         boolean;
     engines:          number;
     fuel_amount_tons: number;
     burn_time_sec:    number | null;
-    thrust:           Thrust;
-    payloads:         Payloads;
 }
 
 export type Payloads = {
-    option_1:          string;
     composite_fairing: CompositeFairing;
-    option_2?:         string;
+    option_1:          string;
 }
 
 export type CompositeFairing = {
     height:   Diameter;
     diameter: Diameter;
 }
-// Type build with QuickType https://app.quicktype.io/#
+
 export default Rocket;
