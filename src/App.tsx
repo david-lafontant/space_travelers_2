@@ -1,5 +1,6 @@
-import Dragons from "./pages/Dragons"
-import Rockets from "./pages/Rockets"
+import Dragons from "./pages/Dragons";
+import Missions from "./pages/Missions";
+import Rockets from "./pages/Rockets";
 
 function App() {
 
@@ -8,11 +9,12 @@ function App() {
       <h1>main page</h1>
       <Rockets />
       <Dragons />
+      <Missions />
 
     </>
-  )
+  );
 }
 
-export default App
+export default App;
 
 
