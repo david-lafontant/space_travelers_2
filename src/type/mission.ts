@@ -1,4 +1,4 @@
-type Missions = {
+type Mission = {
   mission_name:  string;
   mission_id:    string;
   manufacturers: string[];
@@ -9,4 +9,4 @@ type Missions = {
   description:   string;
 }
 
-export default Missions;
+export default Mission;
