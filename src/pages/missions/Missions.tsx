@@ -14,7 +14,7 @@ function Missions() {
 
 useEffect(()=>{
   dispatch(fetchMissions());
-},[dispatchEvent])
+},[dispatch])
 
 
 if (loading === 'pending') {
