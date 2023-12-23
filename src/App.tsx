@@ -15,6 +15,7 @@ function App() {
        <Route path="/" element={<Rockets />} errorElement={<ErrorBoundary />} />
        <Route path="/dragons" element={<Dragons />} errorElement={<ErrorBoundary />} />
        <Route path="/missions" element={<Missions />} errorElement={<ErrorBoundary />} />
+       <Route path="*" element={<Rockets />} errorElement={<ErrorBoundary />} />
 
       </Routes>
      </>
