@@ -1,10 +1,10 @@
 
 import { useEffect } from 'react';
 
-import { useAppDispatch, useAppSelector } from "../app/hooks";
-import type { RootState } from '../app/store';
-import { fetchMissions } from '../app/missions/missionsSlice';
-import Mission from '../type/mission';
+import { useAppDispatch, useAppSelector } from "../../services/hooks";
+import type { RootState } from '../../services/store';
+import { fetchMissions } from '../../services/missions/missionsSlice';
+import Mission from '../../types/mission';
 
 function Missions() {
   const dispatch = useAppDispatch();
