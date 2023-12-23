@@ -37,7 +37,7 @@ if (loading === 'succeeded') {
 
   return (
     <>
-    Dragon page
+<p>Mission page</p>
       <ul>
         {missionItems}
       </ul>
