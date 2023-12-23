@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 
-import { useAppDispatch, useAppSelector } from "../app/hooks";
-import type { RootState } from '../app/store';
-import { fetchDragons } from '../app/dragons/dragonsSlice';
-import Dragon from '../type/dragon';
+import { useAppDispatch, useAppSelector } from "../../services/hooks";
+import type { RootState } from '../../services/store';
+import { fetchDragons } from '../../services/dragons/dragonsSlice';
+import Dragon from '../../types/dragon';
 
 function Dragons() {
   const dispatch = useAppDispatch();
