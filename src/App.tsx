@@ -1,17 +1,22 @@
+import { Routes, Route } from "react-router-dom";
 import Dragons from "./pages/dragons/Dragons";
-import Missions from "./pages/dragons/Dragons";
+import Missions from "./pages/missions/Missions";
 import Rockets from "./pages/rockets/Rockets";
+import Header from "./layout/Header";
 
 function App() {
 
   return (
     <>
-      <h1>main page</h1>
-      <Rockets />
-      <Dragons />
-      <Missions />
+     <Header />
 
-    </>
+      <Routes>
+       <Route path="/" element={<Rockets />} />
+       <Route path="/dragons" element={<Dragons />} />
+       <Route path="/missions" element={<Missions />} />
+
+      </Routes>
+     </>
   );
 }
 
