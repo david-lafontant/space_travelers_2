@@ -3,9 +3,10 @@
 
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import MissionType from "../../types/mission";
 
 interface missionState {
-  missions: [],
+  missions: MissionType[],
   status: 'idle' | 'pending' | 'succeeded' | 'failed',
   error: string | null | undefined
 }

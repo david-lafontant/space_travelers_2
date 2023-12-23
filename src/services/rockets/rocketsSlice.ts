@@ -1,8 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from 'axios';
+import RocketType from "../../types/rocket";
 
 interface rocketState {
-  rockets: []
+  rockets: RocketType[]
   status: 'idle' | 'pending' | 'succeeded' | 'failed',
   error: string | null | undefined
 }

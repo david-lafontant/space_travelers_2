@@ -3,7 +3,8 @@ import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from "../../services/hooks";
 import type { RootState } from '../../services/store';
 import { fetchDragons } from '../../services/dragons/dragonsSlice';
-import Dragon from '../../types/dragon';
+import DragonType from '../../types/dragon';
+import Dragon from '../../components/dragon/Dragon';
 
 function Dragons() {
   const dispatch = useAppDispatch();
@@ -28,20 +29,26 @@ if (loading === 'failed') {
 if (loading === 'succeeded') {
 
 
-  const dragonItems = dragonsList.map((item: Dragon) =>
-    <li key={item.id}>
-      {item.name}
-    </li>
-  );
+
 
   return (
     <>
     Dragon page
-      <ul>
-        {dragonItems}
-      </ul>
+    {dragonsList && dragonsList.map((dragon: DragonType) => {
+          return <Dragon key={dragon.name} dragon={dragon} />
+        })}
     </>
   )
+
+
+
+
+
+
+
+
+
+
 
 }
 }

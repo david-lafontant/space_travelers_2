@@ -1,8 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import DragonType from "../../types/dragon";
 
 interface dragonState {
-  dragons: [],
+  dragons: DragonType[],
   status: 'idle' | 'pending' | 'succeeded' | 'failed',
   error: string | null | undefined
 }

@@ -1,5 +1,5 @@
 
-type Rocket = {
+type RocketType = {
     height:           Diameter;
     diameter:         Diameter;
     mass:             Mass;
@@ -98,4 +98,4 @@ export type CompositeFairing = {
     diameter: Diameter;
 }
 
-export default Rocket;
+export default RocketType;
