@@ -3,6 +3,7 @@ import Dragons from "./pages/dragons/Dragons";
 import Missions from "./pages/missions/Missions";
 import Rockets from "./pages/rockets/Rockets";
 import Header from "./layout/Header";
+import ErrorBoundary from "./utils/errors/ErrorBoundary";
 
 function App() {
 
@@ -11,9 +12,9 @@ function App() {
      <Header />
 
       <Routes>
-       <Route path="/" element={<Rockets />} />
-       <Route path="/dragons" element={<Dragons />} />
-       <Route path="/missions" element={<Missions />} />
+       <Route path="/" element={<Rockets />} errorElement={<ErrorBoundary />} />
+       <Route path="/dragons" element={<Dragons />} errorElement={<ErrorBoundary />} />
+       <Route path="/missions" element={<Missions />} errorElement={<ErrorBoundary />} />
 
       </Routes>
      </>
