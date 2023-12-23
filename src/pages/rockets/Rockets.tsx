@@ -3,7 +3,8 @@ import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from "../../services/hooks";
 import type { RootState } from '../../services/store';
 import { fetchRockets } from '../../services/rockets/rocketsSlice';
-import Rocket from '../../types/rocket';
+import RocketType from '../../types/rocket';
+import Rocket from '../../components/rocket/Rocket'
 
 function Rockets() {
   const dispatch = useAppDispatch();
@@ -25,20 +26,16 @@ function Rockets() {
 
 
   if (loading === 'succeeded') {
-
-
-    const rocketItems = rocketList.map((item: Rocket) =>
-      <li key={item.id}>
-        {item.name}
-      </li>
-    );
-
+ 
+ 
     return (
       <>
-      Rocket page
-        <ul>
-          {rocketItems}
-        </ul>
+        Rocket page
+
+        {rocketList && rocketList.map((rocket: RocketType) => {
+          return <Rocket key={rocket.name} rocket={rocket} />
+        })}
+
       </>
     )
 
@@ -46,4 +43,4 @@ function Rockets() {
 
 }
 
-export default Rockets
+export default Rockets;
