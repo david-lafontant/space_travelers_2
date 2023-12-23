@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 
-import { useAppDispatch, useAppSelector } from "../app/hooks";
-import type { RootState } from '../app/store';
-import { fetchRockets } from '../app/rockets/rocketsSlice';
-import Rocket from '../type/rocket';
+import { useAppDispatch, useAppSelector } from "../../services/hooks";
+import type { RootState } from '../../services/store';
+import { fetchRockets } from '../../services/rockets/rocketsSlice';
+import Rocket from '../../types/rocket';
 
 function Rockets() {
   const dispatch = useAppDispatch();
