@@ -1,6 +1,6 @@
-import Dragons from "./pages/Dragons";
-import Missions from "./pages/Missions";
-import Rockets from "./pages/Rockets";
+import Dragons from "./pages/dragons/Dragons";
+import Missions from "./pages/dragons/Dragons";
+import Rockets from "./pages/rockets/Rockets";
 
 function App() {
 
