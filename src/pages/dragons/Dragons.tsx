@@ -13,7 +13,7 @@ function Dragons() {
 
 useEffect(()=>{
   dispatch(fetchDragons());
-},[dispatchEvent])
+},[dispatch])
 
 
 if (loading === 'pending') {
