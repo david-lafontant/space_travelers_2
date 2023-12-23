@@ -34,3 +34,4 @@ export default {
 // Data come from https://api.spacexdata.com/v4/rockets
 // Type build with QuickType https://app.quicktype.io/#
 
+// card style come from https://flowbite.com/
