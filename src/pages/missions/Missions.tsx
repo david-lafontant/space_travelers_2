@@ -14,7 +14,7 @@ function Missions() {
 
 useEffect(()=>{
   dispatch(fetchMissions());
-},[dispatchEvent])
+},[dispatch])
 
 
 if (loading === 'pending') {
@@ -37,7 +37,7 @@ if (loading === 'succeeded') {
 
   return (
     <>
-    Dragon page
+<p>Mission page</p>
       <ul>
         {missionItems}
       </ul>
