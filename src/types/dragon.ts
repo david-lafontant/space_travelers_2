@@ -1,5 +1,5 @@
 
-type Dragon = {
+type DragonType = {
   heat_shield:         HeatShield;
   launch_payload_mass: PayloadMass;
   launch_payload_vol:  LaunchPayloadVol;
@@ -76,4 +76,4 @@ export type Cargo = {
   unpressurized_cargo: boolean;
 }
 
-export default Dragon;
+export default DragonType;
